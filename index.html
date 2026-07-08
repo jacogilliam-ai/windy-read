@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Windy Weatherfoot, expanded</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- PASSWORD GATE -->
+  <div id="gate" class="gate">
+    <div class="gate-inner">
+      <img src="images/logo.webp" alt="Windy Weatherfoot" class="gate-logo" />
+      <p class="gate-eyebrow">A private pitch, prepared for Ryan Black</p>
+      <form id="gate-form" class="gate-form" autocomplete="off">
+        <input type="password" id="gate-input" placeholder="password" autocomplete="off" spellcheck="false" />
+        <button type="submit">Enter</button>
+      </form>
+      <p id="gate-error" class="gate-error"></p>
+    </div>
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <main id="site" class="site hidden" aria-hidden="true">
+
+    <!-- MINI NAV -->
+    <nav class="nav">
+      <img src="images/logo.webp" alt="Windy Weatherfoot" class="nav-logo" />
+      <span class="nav-tag">Private pitch — July 2026</span>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" style="background-image: url('images/hero-cottage-moon.jpg');">
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <p class="eyebrow eyebrow-light">A pitch for Ryan Black</p>
+        <h1 class="hero-title">Windy Weatherfoot<br /><em>expanded.</em></h1>
+        <p class="hero-sub">A franchise roadmap for the animated world of Sunpike, and the merchandise, community, and story it deserves.</p>
+        <div class="hero-scroll">
+          <span>Scroll</span>
+          <div class="hero-scroll-line"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPENING THESIS -->
+    <section class="section section-cream">
+      <div class="container container-narrow">
+        <p class="eyebrow">The read</p>
+        <h2 class="display-1">You've built a show that looks like it belongs on Netflix.</h2>
+        <p class="display-1 display-muted"><em>The retail extensions haven't caught up yet.</em></p>
+        <p class="body-lg">This deck is one fan's take on how to close that gap — the plush line, the club, the packaging overhaul, the Roblox play, and the books. Built as a set of moves designed to turn Windy Weatherfoot from a show into a franchise.</p>
+        <p class="body-lg">Everything below is directional. Numbers are rough. Ideas are yours to take, tear apart, or hand to whoever's already working on this. I just wanted to make the case worth making.</p>
+      </div>
+    </section>
+
+    <!-- THE WORLD -->
+    <section class="section section-forest">
+      <div class="container">
+        <p class="eyebrow eyebrow-light">The world</p>
+        <h2 class="display-1 display-light">Sunpike is a place, not a setting.</h2>
+      </div>
+      <div class="world-grid">
+        <figure class="world-img world-img-lg">
+          <img src="images/hero-mountains-wagon.jpg" alt="Sunpike valley with mountains and wagon" loading="lazy" />
+        </figure>
+        <figure class="world-img">
+          <img src="images/meadow-mountains.jpg" alt="Meadow with mountains" loading="lazy" />
+        </figure>
+        <figure class="world-img">
+          <img src="images/hero-cottage-sunset.jpg" alt="Cottage at sunset" loading="lazy" />
+        </figure>
+      </div>
+      <div class="container container-narrow">
+        <p class="body-lg body-light">Every durable kids IP starts here. Not with a character, not with a slogan — with a place kids want to live inside. Bluey has Brisbane. Moomin has Moominvalley. Claynosaurz has the reef. Windy Weatherfoot has Sunpike, and the animation already sells it. The rest of the brand doesn't yet.</p>
+      </div>
+    </section>
+
+    <!-- THE CAST -->
+    <section class="section section-cream">
+      <div class="container">
+        <p class="eyebrow">The cast</p>
+        <h2 class="display-1">Seven characters kids will name their pets after.</h2>
+      </div>
+
+      <div class="cast-grid">
+        <figure class="cast-card cast-card-hero">
+          <img src="images/windy.jpg" alt="Windy" loading="lazy" />
+          <figcaption>
+            <p class="cast-name">Windy</p>
+            <p class="cast-trait">The vlogger. The oldest twin. The one kids see themselves in.</p>
+          </figcaption>
+        </figure>
+        <figure class="cast-card cast-card-hero">
+          <img src="images/walker.jpg" alt="Walker" loading="lazy" />
+          <figcaption>
+            <p class="cast-name">Walker</p>
+            <p class="cast-trait">The wanderer. Curious, grounded, always looking for the next trail.</p>
+          </figcaption>
+        </figure>
+        <figure class="cast-card">
+          <img src="images/chip.jpg" alt="Chip the chippopotamus" loading="lazy" />
+          <figcaption>
+            <p class="cast-name">Chip</p>
+            <p class="cast-trait">The chippopotamus. Soft, warm, permanently up for a snack.</p>
+          </figcaption>
+        </figure>
+        <figure class="cast-card">
+          <img src="images/carrot-goodeye.jpg" alt="Carrot the pony with Good Eye Deer" loading="lazy" style="object-position: right center;" />
+          <figcaption>
+            <p class="cast-name">Carrot</p>
+            <p class="cast-trait">The unicorn with the carrot horn. Dreamy, loyal, gets dressed up.</p>
+          </figcaption>
+        </figure>
+        <figure class="cast-card">
+          <img src="images/carrot-goodeye.jpg" alt="Good Eye Deer" loading="lazy" style="object-position: left center;" />
+          <figcaption>
+            <p class="cast-name">Good Eye Deer</p>
+            <p class="cast-trait">Sees what others miss. The quiet one everyone listens to.</p>
+          </figcaption>
+        </figure>
+        <figure class="cast-card">
+          <img src="images/chitchat.jpg" alt="Chit Chat the bird" loading="lazy" />
+          <figcaption>
+            <p class="cast-name">Chit Chat</p>
+            <p class="cast-trait">The messenger. Fast, chatty, first to know everything.</p>
+          </figcaption>
+        </figure>
+        <figure class="cast-card">
+          <img src="images/leif.jpg" alt="Leif" loading="lazy" />
+          <figcaption>
+            <p class="cast-name">Leif</p>
+            <p class="cast-trait">Rooted, wise, watches the seasons turn.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- THE VLOGGER INSIGHT -->
+    <section class="section section-midnight">
+      <div class="container container-narrow">
+        <p class="eyebrow eyebrow-light">The insight everyone's sleeping on</p>
+        <h2 class="display-1 display-light">Windy isn't just a character. She's the show's founder.</h2>
+      </div>
+      <figure class="figure-full">
+        <img src="images/windy.jpg" alt="Windy in vlogger REC frame" loading="lazy" />
+      </figure>
+      <div class="container container-narrow">
+        <p class="body-lg body-light">Windy vlogs. She films, she narrates, she cuts to a real girl who talks back. That's not a stylistic choice — that's the biggest untapped merch lever in the whole IP.</p>
+        <p class="body-lg body-light">Every product that ships shouldn't be branded "Windy Weatherfoot." It should be branded <em>Windy's.</em> Windy's vest. Windy's camera pouch. Windy's mission journal. Windy's sleepover kit. That's the difference between a $12 tee and a $32 tee. Kids don't buy from brands. They buy from characters.</p>
+        <p class="body-lg body-light">The footprint symbol on her vest is already the mark. It's on-model. It's on every episode. Every apparel piece, every packaging box, every unlock screen in Roblox gets that footprint. That's how a character IP becomes a wardrobe.</p>
+      </div>
+    </section>
+
+    <!-- THE GAP -->
+    <section class="section section-cream">
+      <div class="container">
+        <p class="eyebrow">The gap</p>
+        <h2 class="display-1">Same brand. Two different quality bars.</h2>
+      </div>
+      <div class="gap-grid">
+        <figure class="gap-item">
+          <img src="images/bed-hug.jpg" alt="A frame from Windy Weatherfoot" loading="lazy" />
+          <figcaption>
+            <p class="gap-label">The show</p>
+            <p class="gap-desc">Netflix-tier 3D animation. Character design at Trolls / Puss in Boots level. Sunpike renders beautifully across the whole cast.</p>
+          </figcaption>
+        </figure>
+        <figure class="gap-item">
+          <img src="images/toothpaste-current.webp" alt="Current NOBS Jr toothpaste packaging" loading="lazy" />
+          <figcaption>
+            <p class="gap-label">The retail extension</p>
+            <p class="gap-desc">AI-generated packaging, garbled type, no character presence. Parents notice this in the aisle. This is the single highest-leverage brand investment available.</p>
+          </figcaption>
+        </figure>
+      </div>
+      <div class="container container-narrow">
+        <p class="body-lg">This isn't a critique of anyone's choices. Shipping a brand is hard. Getting to market matters. But now that the show has proven itself, the retail layer has to catch up — because a parent picks up that toothpaste box before they ever watch an episode. First impression, wrong bar.</p>
+        <p class="body-lg"><strong>The fix is a 30-day project.</strong> One consistent illustrator. One typographic system. One color palette pulled from the show itself. Every SKU redrawn to match the animation's bar.</p>
+      </div>
+    </section>
+
+    <!-- THE SIX MOVES -->
+    <section class="section section-forest">
+      <div class="container">
+        <p class="eyebrow eyebrow-light">The roadmap</p>
+        <h2 class="display-1 display-light">Six moves that turn a show into a franchise.</h2>
+      </div>
+
+      <div class="moves">
+        <article class="move">
+          <div class="move-num">01</div>
+          <div class="move-body">
+            <h3 class="move-title">The cast plush line.</h3>
+            <p class="move-desc">Chip and Carrot first. Real plush factory, not print-on-demand. $28-34 retail. Every durable kids IP has an iconic plush kids sleep with — that's what turns a show into a childhood. This alone is a bigger revenue line than everything currently on the store combined.</p>
+          </div>
+        </article>
+
+        <article class="move">
+          <div class="move-num">02</div>
+          <div class="move-body">
+            <h3 class="move-title">The Generation Preservation Club.</h3>
+            <p class="move-desc">Rename the Birthday Play Pledge Box. Turn it into a monthly subscription: one activity, one seed pack, one story chapter, one iron-on footprint patch, one Roblox unlock code. $19-24/mo. Recurring revenue, habit-forming, and the pledge structure is already built for it.</p>
+          </div>
+        </article>
+
+        <article class="move">
+          <div class="move-num">03</div>
+          <div class="move-body">
+            <h3 class="move-title">The creative overhaul.</h3>
+            <p class="move-desc">Kill the AI imagery. Hire one illustrator to build a consistent visual system across packaging, product art, and site imagery. 30-day project. Highest-leverage brand investment available. Parents in this category notice, and they're the buyer.</p>
+          </div>
+        </article>
+
+        <article class="move">
+          <div class="move-num">04</div>
+          <div class="move-body">
+            <h3 class="move-title">Apparel, top to bottom.</h3>
+            <p class="move-desc">Real kids' apparel manufacturer. Proper size grading, 2T through 10. 100% cotton. Colors pulled directly from Sunpike. The footprint symbol on every piece. Kill the adult tee as a hero product — or keep one as a parent-in-the-know SKU.</p>
+          </div>
+        </article>
+
+        <article class="move">
+          <div class="move-num">05</div>
+          <div class="move-body">
+            <h3 class="move-title">Roblox as the sleeper channel.</h3>
+            <p class="move-desc">Every physical product ships with an in-game unlock — a hat, a pet, a Sunpike zone. Physical merch becomes a game economy, and the game drives merch demand. This is the loop CoComelon, Bluey, and Piggy figured out. It makes every SKU worth twice its price to the kid.</p>
+          </div>
+        </article>
+
+        <article class="move">
+          <div class="move-num">06</div>
+          <div class="move-body">
+            <h3 class="move-title">The books.</h3>
+            <p class="move-desc">Board books for ages 2-4. Early readers for 5-7. Approach Chronicle Kids, Abrams, or a licensing deal with Scholastic. High-margin, IP-building, and every parent who buys a book becomes a repeat customer. This is how the IP gets on bookshelves before it hits screens.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- THE MOVEMENT -->
+    <section class="section section-cream">
+      <div class="container container-narrow">
+        <p class="eyebrow">The movement</p>
+        <h2 class="display-1">Good natured. Good to nature.<br/>Home by supper.</h2>
+        <p class="body-lg">The best kids IPs aren't shows kids watch. They're clubs kids join. Bluey has "wackadoo." Moomin has the philosophy. Slumberkins has the feelings. Windy Weatherfoot has a pledge and a whole cast of characters practicing it, and every product should feel like it comes from inside that club.</p>
+        <p class="body-lg">Position the Generation Preservation Club as a fan movement kids belong to. The box is the artifact. The patch is the badge. The Roblox unlock is the initiation. The show is the campfire. Every touchpoint reinforces the same feeling: <em>you're one of us.</em></p>
+      </div>
+      <figure class="figure-full-cream">
+        <img src="images/rain-rescue.jpg" alt="Windy and friends in the rain" loading="lazy" />
+        <figcaption>The whole IP already lives here. The merch just has to catch up.</figcaption>
+      </figure>
+    </section>
+
+    <!-- THE HORIZON -->
+    <section class="section section-midnight">
+      <div class="container">
+        <p class="eyebrow eyebrow-light">The horizon</p>
+        <h2 class="display-1 display-light">Three years.</h2>
+      </div>
+
+      <div class="horizon">
+        <div class="horizon-year">
+          <p class="horizon-label">Year one</p>
+          <p class="horizon-body">Cast plush launches (Chip, Carrot). Club subscription live with 500 founding families. Full packaging overhaul across every existing SKU. Footprint apparel line. Retail-ready.</p>
+        </div>
+        <div class="horizon-year">
+          <p class="horizon-label">Year two</p>
+          <p class="horizon-body">Board books deal signed. Roblox unlock economy live. Second plush wave (Windy, Walker, Chit Chat). Sunpike playset. First major retail partner (Target, Barnes & Noble, or specialty).</p>
+        </div>
+        <div class="horizon-year">
+          <p class="horizon-label">Year three</p>
+          <p class="horizon-body">Full character licensing program. Live experience or touring event pilot. International expansion. Franchise-tier valuation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE ASK -->
+    <section class="section section-cream section-final">
+      <div class="container container-narrow">
+        <p class="eyebrow">The ask</p>
+        <h2 class="display-1">I want to help build this.</h2>
+        <p class="body-lg">Ryan — I've been sitting on these ideas for weeks. I built this site so you could see the thinking without me having to explain it in a text.</p>
+        <p class="body-lg">I don't know if Windy Weatherfoot is hiring right now. I'm open on what a partnership looks like — advisor, contractor, full-time on the brand side. My goal is to see this vision turned into product, and I want to be in the room helping do it. If any of this resonates, I'd love twenty minutes.</p>
+
+        <div class="ask-cta">
+          <a href="mailto:jacogilliam@gmail.com?subject=Windy%20Weatherfoot%20—%20let's%20talk" class="cta-button">Book a call</a>
+          <p class="ask-alt">Or reply to the message. Whichever's easier.</p>
+        </div>
+
+        <div class="ask-about">
+          <p class="ask-about-title">A little about me.</p>
+          <p class="ask-about-body">I built and run <a href="https://aurean.shop" target="_blank" rel="noopener">Aurean</a>, a sterling silver DTC brand I designed from raw material to shipped product. Before that I spent years building creative work across video, brand, and digital. I know how to take a concept from moodboard to warehouse. I want to bring that to a kids' IP I actually believe in.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <p>Prepared privately for Ryan Black.</p>
+      <p>Windy Weatherfoot, expanded — by Jacob Gilliam. July 2026.</p>
+      <p class="footer-fine">All show imagery is © Windy Weatherfoot, used here for private discussion only.</p>
+    </footer>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
