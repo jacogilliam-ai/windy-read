@@ -669,6 +669,7 @@ button { font-family: inherit; }
 }
 .section-forest .lead,
 .section-midnight .lead { color: var(--ink-cream-muted); }
+.lead + .body-lg { margin-top: 28px; }
 
 /* Split block: rounded image + short copy */
 .split {
