@@ -1103,6 +1103,52 @@ button { font-family: inherit; }
   max-width: 28ch;
 }
 
+/* Vest pair (Preservation Club hero visual) */
+.vest-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 0 12px;
+}
+.vest-card {
+  position: relative;
+  margin: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--cream);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease);
+}
+.vest-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.18), 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+.vest-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+.vest-card figcaption {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 15px;
+  color: var(--ink);
+  text-align: center;
+  padding: 10px 12px 14px;
+}
+
+@media (max-width: 600px) {
+  .vest-pair {
+    max-width: 400px;
+    gap: 14px;
+  }
+  .vest-card figcaption { font-size: 13px; padding: 8px 10px 12px; }
+}
+
 /* =========================================================
    AGE TIERS (three demographic doors)
    ========================================================= */
