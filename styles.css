@@ -1017,7 +1017,7 @@ button { font-family: inherit; }
   display: grid;
   grid-template-columns: 1.15fr 1fr;
   gap: clamp(32px, 5vw, 60px);
-  align-items: center;
+  align-items: start;
 }
 .prod-mechanism-copy p {
   font-size: clamp(16px, 1.25vw, 19px);
