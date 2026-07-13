@@ -1,10 +1,10 @@
 /* ------------------------------------------------------------
-   Windy Weatherfoot pitch — client script
+   Weatherfoot read, client script.
    Intro splash + scroll reveals.
    ------------------------------------------------------------ */
 
 (function () {
-  const STORAGE_KEY = 'ww-pitch-entered';
+  const STORAGE_KEY = 'ww-read-entered';
 
   const gate = document.getElementById('gate');
   const site = document.getElementById('site');
@@ -26,7 +26,7 @@
 
   // Staggered reveal on scroll
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  // Note: .fw-node is intentionally excluded — it uses transform for radial
+  // Note: .fw-node is intentionally excluded because it uses transform for radial
   // positioning, which an inline reveal transform would clobber.
   const revealTargets = document.querySelectorAll(
     '.section .eyebrow, .section .display-1, .section .lead, .section .body-lg, ' +
