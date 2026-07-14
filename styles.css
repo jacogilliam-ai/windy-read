@@ -1450,176 +1450,120 @@ button { font-family: inherit; }
   font-style: normal;
 }
 
-/* HOW THIS WORKS: 2-column partnership grid */
-.how-grid {
+/* TL;DR summary block below hero */
+.tldr-grid {
+  max-width: 720px;
+  margin: 40px auto 0;
+  display: flex;
+  flex-direction: column;
+}
+.tldr-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 56px;
-  max-width: 1100px;
-  margin: 56px auto 0;
-  padding: 0 var(--section-pad-x);
+  grid-template-columns: 140px 1fr;
+  gap: 32px;
+  align-items: baseline;
+  padding: 22px 0;
+  border-top: 1px solid rgba(34, 48, 32, 0.12);
 }
-.how-item {
-  padding: 0;
+.tldr-row:first-child {
+  border-top: none;
+  padding-top: 0;
 }
-.how-item h3 {
+.tldr-label {
   font-family: var(--font-display);
   font-weight: 600;
   font-style: italic;
   font-size: 22px;
-  line-height: 1.25;
-  color: var(--ink);
-  margin: 0 0 12px;
-}
-.how-item p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--ink-muted);
-  margin: 0;
-}
-
-/* NEED LIST: numbered items on forest background */
-.need-list {
-  max-width: 900px;
-  margin: 56px auto 0;
-  padding: 0 var(--section-pad-x);
-  display: flex;
-  flex-direction: column;
-}
-.need-item {
-  display: flex;
-  gap: 24px;
-  padding: 28px 0;
-  border-top: 1px solid rgba(244, 235, 216, 0.1);
-}
-.need-item:first-child { border-top: none; padding-top: 0; }
-.need-num {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-style: italic;
-  font-size: 28px;
   color: var(--accent-gold);
   margin: 0;
-  min-width: 44px;
-  flex-shrink: 0;
-  line-height: 1;
-  padding-top: 4px;
+  line-height: 1.2;
 }
-.need-body h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-style: italic;
-  font-size: 21px;
-  line-height: 1.25;
-  color: var(--ink-cream);
-  margin: 0 0 10px;
-}
-.need-body p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: rgba(244, 235, 216, 0.85);
+.tldr-value {
+  font-size: 17px;
+  line-height: 1.5;
+  color: var(--ink);
   margin: 0;
 }
 
-/* RISKS LIST: numbered items on cream background */
-.risks-list {
-  max-width: 900px;
+/* How we'd work together: 3-column grid combining rhythm + needs + risks */
+.together-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 48px;
+  max-width: 1200px;
   margin: 56px auto 0;
   padding: 0 var(--section-pad-x);
-  display: flex;
-  flex-direction: column;
 }
-.risk-item {
-  display: flex;
-  gap: 24px;
-  padding: 28px 0;
-  border-top: 1px solid rgba(34, 48, 32, 0.12);
+.together-col {
+  padding: 0;
 }
-.risk-item:first-child { border-top: none; padding-top: 0; }
-.risk-num {
+.together-kicker {
   font-family: var(--font-display);
   font-weight: 600;
   font-style: italic;
-  font-size: 28px;
-  color: var(--accent-gold);
-  margin: 0;
-  min-width: 44px;
-  flex-shrink: 0;
-  line-height: 1;
-  padding-top: 4px;
-}
-.risk-body h3 {
-  font-family: var(--font-display);
-  font-weight: 600;
-  font-style: italic;
-  font-size: 21px;
-  line-height: 1.25;
-  color: var(--ink);
-  margin: 0 0 10px;
-}
-.risk-body p {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--ink-muted);
-  margin: 0;
-}
-
-/* ASK OFFER: pricing block inside The Ask section */
-.ask-offer {
-  margin: 40px 0 32px;
-  padding: 32px;
-  background: rgba(21, 105, 60, 0.08);
-  border-left: 4px solid var(--green);
-  border-radius: 6px;
-}
-.ask-offer-eyebrow {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2.5px;
-  text-transform: uppercase;
-  color: var(--green);
-  margin: 0 0 12px;
-}
-.ask-offer-price {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-style: italic;
-  font-size: clamp(28px, 4vw, 36px);
-  line-height: 1.15;
+  font-size: 22px;
   color: var(--ink);
   margin: 0 0 20px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--accent-gold);
+  display: inline-block;
 }
-.ask-offer-list {
+.together-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.ask-offer-list li {
+.together-col li {
   font-size: 15px;
   line-height: 1.55;
-  color: var(--ink);
-  padding: 6px 0 6px 22px;
+  color: var(--ink-muted);
+  padding: 10px 0 10px 20px;
   position: relative;
+  border-top: 1px solid rgba(34, 48, 32, 0.08);
 }
-.ask-offer-list li::before {
+.together-col li:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+.together-col li:first-child::before {
+  top: 8px;
+}
+.together-col li::before {
   content: '';
   position: absolute;
   left: 0;
-  top: 14px;
+  top: 20px;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: var(--green);
+  background: var(--accent-gold);
+}
+.together-note {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-muted);
+  font-style: italic;
+  margin: 16px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(34, 48, 32, 0.12);
 }
 
-/* Responsive stacking for new sections */
+/* Responsive stacking */
 @media (max-width: 900px) {
-  .how-grid {
+  .together-grid {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 40px;
   }
 }
 @media (max-width: 640px) {
+  .tldr-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 20px 0;
+  }
+  .tldr-label {
+    font-size: 20px;
+  }
   .plan-detail summary {
     font-size: 14px;
     padding-right: 28px;
@@ -1628,21 +1572,6 @@ button { font-family: inherit; }
     font-size: 13px;
     margin-left: 22px;
     padding-left: 12px;
-  }
-  .need-item, .risk-item {
-    flex-direction: column;
-    gap: 8px;
-  }
-  .need-num, .risk-num {
-    font-size: 24px;
-    min-width: 0;
-  }
-  .ask-offer {
-    padding: 24px;
-    margin: 32px 0 28px;
-  }
-  .ask-offer-price {
-    font-size: 24px;
   }
 }
 
