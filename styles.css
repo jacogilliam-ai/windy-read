@@ -1380,6 +1380,272 @@ button { font-family: inherit; }
 }
 .plan-month li:first-child::before { top: 10px; }
 
+/* Plan expandable details: click to reveal plain-English explanation per bullet */
+.plan-details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.plan-detail {
+  border-top: 1px solid rgba(244, 235, 216, 0.08);
+  padding: 12px 0;
+}
+.plan-detail:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+.plan-detail summary {
+  cursor: pointer;
+  list-style: none;
+  position: relative;
+  padding: 0 32px 0 22px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(244, 235, 216, 0.92);
+  transition: color 0.2s;
+  outline: none;
+}
+.plan-detail summary::-webkit-details-marker { display: none; }
+.plan-detail summary::marker { color: transparent; }
+.plan-detail summary::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+}
+.plan-detail summary::after {
+  content: '+';
+  position: absolute;
+  right: 6px;
+  top: -3px;
+  color: var(--accent-gold);
+  font-size: 1.4em;
+  line-height: 1;
+  font-weight: 300;
+  transition: transform 0.2s ease;
+}
+.plan-detail[open] > summary::after {
+  content: '\2212';
+}
+.plan-detail summary:hover {
+  color: var(--accent-gold);
+}
+.plan-detail summary:focus-visible {
+  color: var(--accent-gold);
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 4px;
+  border-radius: 4px;
+}
+.plan-detail-body {
+  margin: 12px 0 0 22px;
+  padding-left: 16px;
+  border-left: 2px solid rgba(212, 162, 74, 0.35);
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(244, 235, 216, 0.7);
+  font-style: normal;
+}
+
+/* HOW THIS WORKS: 2-column partnership grid */
+.how-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 56px;
+  max-width: 1100px;
+  margin: 56px auto 0;
+  padding: 0 var(--section-pad-x);
+}
+.how-item {
+  padding: 0;
+}
+.how-item h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 12px;
+}
+.how-item p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+/* NEED LIST: numbered items on forest background */
+.need-list {
+  max-width: 900px;
+  margin: 56px auto 0;
+  padding: 0 var(--section-pad-x);
+  display: flex;
+  flex-direction: column;
+}
+.need-item {
+  display: flex;
+  gap: 24px;
+  padding: 28px 0;
+  border-top: 1px solid rgba(244, 235, 216, 0.1);
+}
+.need-item:first-child { border-top: none; padding-top: 0; }
+.need-num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--accent-gold);
+  margin: 0;
+  min-width: 44px;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 4px;
+}
+.need-body h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.25;
+  color: var(--ink-cream);
+  margin: 0 0 10px;
+}
+.need-body p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: rgba(244, 235, 216, 0.85);
+  margin: 0;
+}
+
+/* RISKS LIST: numbered items on cream background */
+.risks-list {
+  max-width: 900px;
+  margin: 56px auto 0;
+  padding: 0 var(--section-pad-x);
+  display: flex;
+  flex-direction: column;
+}
+.risk-item {
+  display: flex;
+  gap: 24px;
+  padding: 28px 0;
+  border-top: 1px solid rgba(34, 48, 32, 0.12);
+}
+.risk-item:first-child { border-top: none; padding-top: 0; }
+.risk-num {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 28px;
+  color: var(--accent-gold);
+  margin: 0;
+  min-width: 44px;
+  flex-shrink: 0;
+  line-height: 1;
+  padding-top: 4px;
+}
+.risk-body h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: 21px;
+  line-height: 1.25;
+  color: var(--ink);
+  margin: 0 0 10px;
+}
+.risk-body p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-muted);
+  margin: 0;
+}
+
+/* ASK OFFER: pricing block inside The Ask section */
+.ask-offer {
+  margin: 40px 0 32px;
+  padding: 32px;
+  background: rgba(21, 105, 60, 0.08);
+  border-left: 4px solid var(--green);
+  border-radius: 6px;
+}
+.ask-offer-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--green);
+  margin: 0 0 12px;
+}
+.ask-offer-price {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-style: italic;
+  font-size: clamp(28px, 4vw, 36px);
+  line-height: 1.15;
+  color: var(--ink);
+  margin: 0 0 20px;
+}
+.ask-offer-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.ask-offer-list li {
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  padding: 6px 0 6px 22px;
+  position: relative;
+}
+.ask-offer-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 14px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--green);
+}
+
+/* Responsive stacking for new sections */
+@media (max-width: 900px) {
+  .how-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+@media (max-width: 640px) {
+  .plan-detail summary {
+    font-size: 14px;
+    padding-right: 28px;
+  }
+  .plan-detail-body {
+    font-size: 13px;
+    margin-left: 22px;
+    padding-left: 12px;
+  }
+  .need-item, .risk-item {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .need-num, .risk-num {
+    font-size: 24px;
+    min-width: 0;
+  }
+  .ask-offer {
+    padding: 24px;
+    margin: 32px 0 28px;
+  }
+  .ask-offer-price {
+    font-size: 24px;
+  }
+}
+
 /* Email preview: Figma mockup of the first welcome email, embedded inside the plan section */
 .email-preview {
   max-width: 480px;
